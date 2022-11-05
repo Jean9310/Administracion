@@ -1,0 +1,23 @@
+input{
+    align-content: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: blue;
+   
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.col, .row{
+    color: black;
+    text-transform: uppercase;
+    justify-self: unset;
+    border-color: 1px solid black;
+   
+    
+}
+label{
+    color:black;
+}
+#btn{
+    color: blue;
+}

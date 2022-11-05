@@ -1,0 +1,36 @@
+th{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: blue;
+    text-decoration-line: underline;
+}
+#calendario{
+    align-items: rigth;
+}
+fieldset{
+    size: 2em;
+    color: black;
+    
+    border: 3px;
+}
+label{
+    color: black;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-decoration: underline double;
+    
+}
+
+#datos{
+    text-align: center;
+}
+textarea{
+    margin-left: 10px;
+    margin-left: 10px;
+    padding: auto;
+}
+div{
+    text-transform: uppercase;
+}
