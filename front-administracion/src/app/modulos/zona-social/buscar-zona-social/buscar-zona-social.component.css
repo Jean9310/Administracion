@@ -13,24 +13,13 @@ fieldset{
     
     border: 3px;
 }
-label{
-    color: black;
-    font-weight: bold;
-    font-style: oblique;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    text-decoration: underline double;
-    
+td{
+    text-align: left;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-color: blue;
 }
-
-#datos{
-    text-align: center;
-}
-textarea{
-    margin-left: 10px;
-    margin-left: 10px;
-    padding: auto;
-}
-div{
-    text-transform: uppercase;
+table,tr{
+    border-style: dashed dotted ;
+    color: darkblue;
 }

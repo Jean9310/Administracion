@@ -1,45 +1,68 @@
 <body>
   <div class="container">
     <!-- Page Content goes here -->
+
+    <fieldset>
+      <legend>Datos del conjunto </legend><br>
+      <br><div class="row 5">
+        <div class="col-md-5">
+          <label><i class="small material-icons">chrome_reader_mode</i> Nit</label>
+          <input type="text" class="form-control" placeholder=" " aria-label="Nombre">
+        </div>
+        <div class="col-md-6">
+          <label> <i class="small material-icons">home</i>Nombre de conjunto</label>
+          <input type="text" class="form-control" placeholder=" " aria-label="Nombre">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label> <i class="small material-icons">confirmation_number</i>direccion</label>
+          <input type="text" class="form-control" placeholder=" " aria-label="First-name">
+        </div>
+        <div class="col">
+          <label> <i class="small material-icons">phone</i>telefono</label>
+          <input type="text" class="form-control" placeholder="" aria-label="Last-name">
+        </div>
+        <div class="col">
+          <label><i class="small material-icons">panorama</i> estrato</label>
+          <input type="text" class="form-control" placeholder="" aria-label="Last-name">
+        </div>
+      </div>
+    </fieldset>
+
     <div class="row 5">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="Nit" aria-label="Nombre">
+      <div class="col-md-7">
+        <label for="inputEmail4" class="form-label"><i class="small material-icons">public</i> correo</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      
+        <div class="col-md-5">
+          <label> <i class="small material-icons">credit_card</i> Cuenta Bancaria</label>
+        <input type="text" class="form-control" placeholder="" aria-label="txtCuentaBancaria">
+      </div>
+      
+      <div class="col-md 5">
+        <label><i class="small material-icons">account_balance</i> Banco</label>
+        <input type="text" class="form-control" placeholder="" aria-label="txtBanco">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Nombre Conjunto" aria-label="Nombre">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" placeholder="direccion" aria-label="First-name">
+        <label><i class="small material-icons">chrome_reader_mode</i> Interes de Mora</label>
+        <input type="text" class="form-control" placeholder="" aria-label="txtInteresMora">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="telefono" aria-label="Last-name">
+        <label><i class="small material-icons">content_copy</i> Numero de factura</label>
+        <input type="text" class="form-control" placeholder="" aria-label="txtConsecutivoFactura">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="estrato" aria-label="Last-name">
+        <label> <i class="small material-icons">euro_symbol</i> Presupuesto</label>
+        <input type="text" class="form-control" placeholder="" aria-label="txtPresupuesto">
       </div>
-    </div>
-    <div class="col-md-4">
-      <label for="inputEmail4" class="form-label">correo</label>
-      <input type="email" class="form-control" id="email">
-    </div>
 
-    <div class="col-md-3">
-      <input type="text" class="form-control" placeholder="Cuenta Bancaria" aria-label="txtCuentaBancaria">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" placeholder="Banco" aria-label="txtBanco">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" placeholder="Interes Mora" aria-label="txtInteresMora">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" placeholder="Consecutivo Factura" aria-label="txtConsecutivoFactura">
-    </div>
-    <div class="col-md-3">
-      <input type="text" class="form-control" placeholder="Presupuesto" aria-label="txtPresupuesto">
-    </div>
 
+    </div>
+    <div class="col-12"><br>
+      <button type="submit" class="btn btn-primary" id="Btn">Crear Nuevo Administrador</button>
+    </div>
   </div>
+  <br>
 </body>

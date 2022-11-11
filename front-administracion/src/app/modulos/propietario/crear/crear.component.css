@@ -1,0 +1,14 @@
+
+label{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    align-items: center;
+    text-decoration: dotted;
+
+}
+input{
+    color: blue;
+    text-transform: uppercase;
+}
