@@ -12,11 +12,11 @@ export class LoginService {
     private http : HttpClient
   ) { }
 
-  validarUsuario(usuario : string, contrasena : string): Observable<LoginModelo>{
+  validarUsuario(usuario : string, clave : string): Observable<LoginModelo>{
     const url : string = 'http://localhost:3000/validar-acceso';
     const acceso ={
       usuario: usuario,
-      clave : contrasena
+      clave : clave
     }
     return this.http.post<LoginModelo>(
       url,

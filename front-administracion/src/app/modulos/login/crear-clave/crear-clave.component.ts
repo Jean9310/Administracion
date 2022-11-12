@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { DatosModelo } from 'src/app/modelos/datos.modelo';
 import { LoginService } from 'src/app/servicios/login.service';
 const cryptoJS = require('crypto-js');
 
@@ -27,7 +28,7 @@ export class CrearClaveComponent implements OnInit {
     clave = cryptoJS.MD5(clave).toString();
     this.loginservice.validarUsuario(usuario, clave)
     .subscribe( (datos)=>{
-      alert('Exito al logearse ' + datos);
+      alert('Exito al logearse ' + datos );
       },
       (error) => {
         console.log(`Error al ingresar ${error}`);
