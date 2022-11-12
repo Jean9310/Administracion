@@ -12,4 +12,8 @@ export class CerrarSesionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cerrarSesion(){
+    
+  }
+
 }

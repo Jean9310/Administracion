@@ -2,8 +2,13 @@
   <div class="nav-wrapper">
     <a href="#!" class="brand-logo"><i class="large material-icons">location_city</i> Propiedad Horizontal</a>
     <ul class="right hide-on-med-and-down">
-      <li><a routerLink="./login/crear-clave" routerLinkActive="router-link-active" ><i class="material-icons left">person</i>Usuario</a></li>
-      <li><a routerLink="./login/cerrar"><i class="material-icons right">settings_power</i>Cerrar Sesion</a></li>
-    </ul>
+      <li *ngIf="sesion === false"><a routerLink="./login/crear-clave" routerLinkActive="router-link-active" ><i class="material-icons left">person</i>Usuario</a></li>
+      <li *ngIf="sesion === true"><a routerLink="/administracion/crear-administracion">Administrador</a></li>
+      <li *ngIf="sesion === true"><a routerLink="/zona-social/buscar-zona-social">alquiler</a></li>
+      <li *ngIf="sesion === true" ><a routerLink="/factura/crear-factura">facturas</a></li>
+      <li *ngIf="sesion === true"><a routerLink="/propietario/crear">propietarios</a></li>
+      <li *ngIf="sesion === true"><a (click)="cerrarSesion()"><i class="material-icons right">settings_power</i>Cerrar Sesion</a></li>
+      </ul>
   </div>
 </nav>
+<!-- los linkeos ya estan hechos para que cuando inicie sesion con el usuario y password aparezcan las demas opciones -->
