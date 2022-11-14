@@ -3,7 +3,7 @@
     <a href="#!" class="brand-logo"><i class="large material-icons">location_city</i> Propiedad Horizontal</a>
     <ul class="right hide-on-med-and-down">
       <li *ngIf="sesion === false"><a routerLink="./login/crear-clave" routerLinkActive="router-link-active" ><i class="material-icons left">person</i>Usuario</a></li>
-      <li *ngIf="sesion === true"><a routerLink="/administracion/crear-administracion">Administrador</a></li>
+      <li *ngIf="sesion === true"><a routerLink="/administracion/buscar-administracion">Administrador</a></li>
       <li *ngIf="sesion === true"><a routerLink="/zona-social/buscar-zona-social">alquiler</a></li>
       <li *ngIf="sesion === true" ><a routerLink="/factura/crear-factura">facturas</a></li>
       <li *ngIf="sesion === true"><a routerLink="/propietario/crear">propietarios</a></li>

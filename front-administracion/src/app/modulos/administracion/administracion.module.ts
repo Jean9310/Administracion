@@ -6,6 +6,7 @@ import { CrearAdministracionComponent } from './crear-administracion/crear-admin
 import { BuscarAdministracionComponent } from './buscar-administracion/buscar-administracion.component';
 import { ActualizarAdministracionComponent } from './actualizar-administracion/actualizar-administracion.component';
 import { EliminarAdministracionComponent } from './eliminar-administracion/eliminar-administracion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { EliminarAdministracionComponent } from './eliminar-administracion/elimi
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

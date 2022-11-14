@@ -62,5 +62,13 @@ export class LoginService {
 
   }  // Esta es para eliminar los archivos de localstorage
 
+  obtenerToken() : string{
+    let datosDeSesion = localStorage.getItem("datossesion");
+    if (datosDeSesion) {
+       let datos = JSON.parse(datosDeSesion);
+      return datos.token;
+    }
+    return '';
+  }
 }
 
