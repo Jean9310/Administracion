@@ -1,10 +1,10 @@
 
 
 <body>
-  <div class="container">
+  <div class="container" [formGroup]="formAdministracion"  (ngSubmit)="guardarAdministracion">
     <!-- Page Content goes here -->
     <div class="row 5">
-      <div class="col" [formGroup]="formAdministracion"  (ngSubmit)="guardarAdministracion">
+      <div class="col" >
         <label><i class="small material-icons">people</i> Nombre</label>
         <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="Nombre">
       </div>
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4" [formGroup]="formAdministracion" (ngSubmit)="guardarAdministracion">
+      <div class="col-md-4" [formGroup]="formAdministracion" >
         <label><i class="small material-icons">contact_mail</i> correo</label>
         <input type="email" class="form-control" id="email" formControlName="correo">
       </div>
