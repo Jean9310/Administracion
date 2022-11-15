@@ -55,7 +55,6 @@ export class CrearAdministracionComponent implements OnInit {
         error :(error)=> {
           console.log(`Error al Guaradar el administrador ${error}`);
         }
-      
       });
   }
 
