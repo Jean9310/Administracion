@@ -21,7 +21,7 @@ export class AdministracionService {
   }
 
   crearAdministrador( administracion : AdministracionModelo) :Observable<AdministracionModelo>{
-    return this.http.post<AdministracionModelo>(`${this.url}/administracion`, administracion ,{
+    return this.http.post<AdministracionModelo>(`${this.url}/administradors`, administracion ,{
       headers: new HttpHeaders({
         'Authorization' : `Bearer ${this.token}`
       })
@@ -30,7 +30,7 @@ export class AdministracionService {
 
   }
   actualizarAdministrador(administracion : AdministracionModelo ) : Observable<AdministracionModelo>{
-    return this.http.put<AdministracionModelo>(`${this.url}/administracion/${administracion.id}`, administracion, {
+    return this.http.put<AdministracionModelo>(`${this.url}/administradors/${administracion.id}`, administracion, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
@@ -38,11 +38,11 @@ export class AdministracionService {
    }
 
   getAdministrador():Observable<AdministracionModelo []>{
-    return this.http.get<AdministracionModelo[]>(`${this.url}/administracion`);
+    return this.http.get<AdministracionModelo[]>(`${this.url}/administradors`);
   }
    
   getAdministradorId(id : string) : Observable<AdministracionModelo>{
-    return this.http.get<AdministracionModelo>(`${this.url}/administracion/${id}`, {
+    return this.http.get<AdministracionModelo>(`${this.url}/administradors/${id}`, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })

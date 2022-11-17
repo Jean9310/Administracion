@@ -11,7 +11,9 @@ export class BuscarAdministracionComponent implements OnInit {
   listadoAdministracion : AdministracionModelo[] = [];
   constructor(
     private administracionService : AdministracionService
-  ) { }
+  ) {
+    this.getListadoDeAdministradores();
+   }
 
   ngOnInit(): void {
   }

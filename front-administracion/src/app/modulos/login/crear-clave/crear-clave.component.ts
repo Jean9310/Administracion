@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
-import { DatosModelo } from 'src/app/modelos/datos.modelo';
 import { LoginService } from 'src/app/servicios/login.service';
 const cryptoJS = require('crypto-js');
 
@@ -11,9 +10,9 @@ const cryptoJS = require('crypto-js');
 })
 export class CrearClaveComponent implements OnInit {
   formValidador : FormGroup = this.formBuilder.group({
-    'usuario' : ['', [Validators.required] ],
+    'usuario' : ['',[Validators.required ]],
     'contrasena': ['',Validators.required]
-  })
+  });
 
   constructor(
     private formBuilder : FormBuilder,
@@ -27,13 +26,13 @@ export class CrearClaveComponent implements OnInit {
     let clave = this.formValidador.controls["contrasena"].value;
     clave = cryptoJS.MD5(clave).toString();
     this.loginservice.validarUsuario(usuario, clave)
-    .subscribe( (datos)=>{
+    .subscribe( (datos) => {
+      alert(`Logeado con exito ....` + usuario)
        this.loginservice.sesionesGuardadas(datos);
       },
       (error) => {
         console.log(`Error al ingresar ${error}`);
-      }
-      )
+      });
       
   }
   

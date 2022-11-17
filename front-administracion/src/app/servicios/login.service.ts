@@ -12,19 +12,19 @@ export class LoginService {
   
   constructor(
     private http : HttpClient
-  ) { }
+  ) {
+    
+    this.verificacionActualDeLaSesion();
+  }
 
     verificacionActualDeLaSesion(){
-      let informacion = this.obtenerInformacionUsuario()
+      let informacion = this.obtenerInformacionUsuario();
       if (informacion) {
         this.datosUsuarios.next(informacion);
         
       }
     }
 
-    getUsuariosEnSesion(){
-      return this.datosUsuarios.asObservable();
-    }    // esta es para visualizar el listado de usuarios en sesion
     
   validarUsuario(usuario : string, clave : string): Observable<LoginModelo>{
     const url : string = 'http://localhost:3000/validar-acceso';
@@ -40,11 +40,18 @@ export class LoginService {
       }
     )
   }
+  
+  
+    getUsuariosEnSesion(){
+      return this.datosUsuarios.asObservable();
+    }    // esta es para visualizar el listado de usuarios en sesion
+    
 
   sesionesGuardadas(datos : LoginModelo){
     datos.enSesion = true;
     let stringDatos = JSON.stringify(datos)
     localStorage.setItem("datos en sesion ", stringDatos);
+    this.datosUsuarios.next(datos)
 
     } //esta formula es para agregar los usuario al localstorage y queden almacenados
 

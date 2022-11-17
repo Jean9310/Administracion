@@ -19,7 +19,7 @@ const routes: Routes = [
         component: BuscarAdministracionComponent
       },
       {
-        path: "actualizar-administracion",
+        path: "actualizar-administracion/:id",
         component: ActualizarAdministracionComponent
       }
 ];

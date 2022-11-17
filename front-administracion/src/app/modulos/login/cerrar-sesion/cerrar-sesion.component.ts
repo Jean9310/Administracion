@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-cerrar-sesion',
@@ -7,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CerrarSesionComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private loginService : LoginService,
+    private route : Router
+  ) { }
 
   ngOnInit(): void {
-  }
-
-  cerrarSesion(){
-    
+    this.loginService.eliminarSesiones();
+    this.route.navigate(['/inicio'])
   }
 
 }
