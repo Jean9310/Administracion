@@ -2,7 +2,7 @@ export class AdministracionModelo{
     id? : string;
     primer_nombre? : string;
     segundo_nombre?: string;
-    apellido?: string;
+    primer_apellido?: string;
     segundo_apellido? : string;
     documento? : string;
     correo? : string;

@@ -1,37 +1,42 @@
 
 <div>
-    <a class="waves-effect waves-light btn" routerLink="/administracion/crear-administracion"><i class="material-icons left" >cloud</i>Registrar Administrador</a>
+    <a class="waves-effect waves-light btn" routerLink="/administracion/crear-administracion" style="margin-left: 45%;"><i class="material-icons left" >add_box</i>Registrar Administrador</a>
   </div>
   <br>
+  
   
   <table>
     <thead>
       <tr>
-          <th>Primer Nombre</th>
+        
+          <th>Nombre</th>
           <th>Segundo Nombre</th>
-          <th>Primer Apellido</th>
+          <th>Apellido</th>
           <th>Segundo Apellido</th>
           <th>Documento</th>
           <th>Correo</th>
           <th>Celular</th>
           <th>Profesion</th>
+          <th>Opcion</th>
   
       </tr>
     </thead>
   
-    <tbody *ngFor="let administracion of listadoAdministracion">
+    <tbody *ngFor="let admin of listadoAdministracion">
       <tr>
-        <td>{{administracion.primer_nombre}}</td>
-        <td>{{administracion.segundo_nombre}} </td>
-        <td>{{administracion.apellido}} </td>
-        <td>{{administracion.segundo_apellido}} </td>
-        <td>{{administracion.documento}} </td>
-        <td>{{administracion.correo}} </td>
-        <td>{{administracion.celular}} </td>
-        <td>{{administracion.profesion}} </td>
-        <td><a routerlink="/administracion/actualizar-administracion/"{{administracion.id}}>
-          <span>Editar</span>
-        </a></td>
+        
+        <td>{{admin.primer_nombre}}</td>
+        <td>{{admin.segundo_nombre}} </td>
+        <td>{{admin.primer_apellido}} </td>
+        <td>{{admin.segundo_apellido}} </td>
+        <td>{{admin.documento}} </td>
+        <td>{{admin.correo}} </td>
+        <td>{{admin.celular}} </td>
+        <td>{{admin.profesion}} </td>
+       <td>
+        <a routerLink="/administracion/actualizar-administracion/{{admin.id}}">
+        <span> <i class="mediun material-icons">party_mode</i></span></a>
+       </td>
       </tr>
      
     </tbody>

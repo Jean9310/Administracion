@@ -12,11 +12,11 @@ const cryptoJs = require('crypto-js')
 })
 export class CrearAdministracionComponent implements OnInit {
   formAdministracion : FormGroup = this.formBuilder.group({
-    'id':['', [Validators.required] ],
+     'id':['', [Validators.required] ],
     'nombre':['', [Validators.required] ],
-    'Segundo_nombre':['', [Validators.required ]],
-    'apellido':['', [Validators.required]  ],
-    'Segundo_apellido':['', [Validators.required] ],
+    'segundo_nombre':['', [Validators.required ]],
+    'primer_apellido':['', [Validators.required]  ],
+    'segundo_apellido':['', [Validators.required] ],
     'correo':['', [Validators.required] ],
     'documento':['', [Validators.required] ],
     'celular':['', [Validators.required] ],
@@ -40,9 +40,9 @@ export class CrearAdministracionComponent implements OnInit {
   guardarAdministrador(){
     let administracion : AdministracionModelo = {
       primer_nombre: this.formAdministracion.controls['nombre'].value,
-      segundo_nombre : this.formAdministracion.controls['nombres'].value,
-      apellido : this.formAdministracion.controls['apellido'].value,
-      segundo_apellido : this.formAdministracion.controls['apellidos'].value,
+      segundo_nombre : this.formAdministracion.controls['segundo_nombre'].value,
+      primer_apellido : this.formAdministracion.controls['primer_apellido'].value,
+      segundo_apellido : this.formAdministracion.controls['segundo_apellido'].value,
       correo : this.formAdministracion.controls['correo'].value,
       documento : this.formAdministracion.controls['documento'].value,
       celular: this.formAdministracion.controls['celular'].value,
@@ -56,7 +56,7 @@ export class CrearAdministracionComponent implements OnInit {
           this.route.navigate(['/administracion/buscar-administracion']);
         },
         error :(error)=> {
-          console.log(`Error al Guaradar el administrador ${error}`);
+          console.log('Error al Guardar el administrador' + error);
         }
       });
   }

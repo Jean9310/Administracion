@@ -42,6 +42,7 @@ export class AdministracionService {
   }
    
   getAdministradorId(id : string) : Observable<AdministracionModelo>{
+    console.log("Id del propietario : " + id)
     return this.http.get<AdministracionModelo>(`${this.url}/administradors/${id}`, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`

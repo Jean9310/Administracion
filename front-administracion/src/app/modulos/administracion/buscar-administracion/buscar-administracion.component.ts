@@ -9,6 +9,7 @@ import { AdministracionService } from 'src/app/servicios/administracion.service'
 })
 export class BuscarAdministracionComponent implements OnInit {
   listadoAdministracion : AdministracionModelo[] = [];
+
   constructor(
     private administracionService : AdministracionService
   ) {
@@ -22,6 +23,12 @@ export class BuscarAdministracionComponent implements OnInit {
     this.administracionService.getAdministrador()
     .subscribe((administracion : AdministracionModelo[] ) => {
       this.listadoAdministracion = administracion;
-    });
+    },
+    (error) =>{
+      console.log("Se genero error al mostrar el listado de administradores");
+
+    }
+    );
+    
   }
 }

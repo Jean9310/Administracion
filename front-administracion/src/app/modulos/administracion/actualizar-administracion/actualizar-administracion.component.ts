@@ -11,16 +11,17 @@ import { AdministracionService } from 'src/app/servicios/administracion.service'
 })
 export class ActualizarAdministracionComponent implements OnInit {
   id : string = '';
+
   formAdministracion : FormGroup = this.formBuilder.group({
-    'id':['', Validators.required],
-    'nombre':['', Validators.required],
-    'Segundo_nombre':['', Validators.required],
-    'apellido':['', Validators.required],
-    'Segundo_apellido':['', Validators.required],
-    'correo':['', Validators.required],
-    'documento':['', Validators.required],
-    'celular':['', Validators.required],
-    'profesion':['', Validators.required],
+    'id':['', [Validators.required]],
+    'primer_nombre':['', [Validators.required]],
+    'segundo_nombre':['', [Validators.required]],
+    'primer_apellido':['', [Validators.required]],
+    'segundo_apellido':['', [Validators.required]],
+    'documento':['',[ Validators.required]],
+    'correo':['', [Validators.required]],
+    'celular':['', [Validators.required]],
+    'profesion':['',[ Validators.required]],
 
   });
 
@@ -40,16 +41,16 @@ export class ActualizarAdministracionComponent implements OnInit {
   guardarAdministrador(){
     let administracion : AdministracionModelo = {
       id: this.formAdministracion.controls['id'].value,
-      primer_nombre: this.formAdministracion.controls['nombre'].value,
-      segundo_nombre : this.formAdministracion.controls['Segundo_nombre'].value,
-      apellido : this.formAdministracion.controls['apellido'].value,
-      segundo_apellido : this.formAdministracion.controls['Segundo_apellido'].value,
+      primer_nombre: this.formAdministracion.controls['primer_nombre'].value,
+      segundo_nombre : this.formAdministracion.controls['segundo_nombre'].value,
+      primer_apellido : this.formAdministracion.controls['primer_apellido'].value,
+      segundo_apellido : this.formAdministracion.controls['segundo_apellido'].value,
       correo : this.formAdministracion.controls['correo'].value,
       documento : this.formAdministracion.controls['documento'].value,
       celular: this.formAdministracion.controls['celular'].value,
       profesion : this.formAdministracion.controls['profesion'].value,
     }
-    this.administracionService.crearAdministrador(administracion)
+    this.administracionService.actualizarAdministrador(administracion)
       .subscribe( {
         next: (datos) => {
           this.route.navigate(['/administracion/buscar-administracion']);
@@ -64,11 +65,11 @@ export class ActualizarAdministracionComponent implements OnInit {
   getAdmininistracion(){
     this.administracionService.getAdministradorId(this.id)
     .subscribe({
-      next:( administracion) =>{
+      next:( administracion) => {
         this.formAdministracion.controls['id'].setValue(administracion.id);
         this.formAdministracion.controls['primer_nombre'].setValue(administracion.primer_nombre);
         this.formAdministracion.controls['segundo_nombre'].setValue(administracion.segundo_nombre);
-        this.formAdministracion.controls['apellido'].setValue(administracion.apellido);
+        this.formAdministracion.controls['primer_apellido'].setValue(administracion.primer_apellido);
         this.formAdministracion.controls['segundo_apellido'].setValue(administracion.segundo_apellido);
         this.formAdministracion.controls['correo'].setValue(administracion.correo);
         this.formAdministracion.controls['documento'].setValue(administracion.documento);
@@ -77,7 +78,7 @@ export class ActualizarAdministracionComponent implements OnInit {
         
       },
       error:(error)=>{
-        console.log(`Error al buscar al Administrador ${error}`);
+        console.log('Error al buscar al Administrador' + error);
       }
     })
   }
