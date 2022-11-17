@@ -1,1 +1,29 @@
-<p>buscar-conjunto works!</p>
+<div class="mt-5">
+    <a class="waves-effect waves-light btn" routerLink="/modelo/crear-conjunto">Registrar Conjunto</a>
+</div>
+
+<table>
+    <thead>
+      <tr>
+          <th>Nombre</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
+          <th>Correo</th>
+          <th>Editar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let conj of listadoConjuntos">
+        <td>{{conj.nombre_conjunto}}</td>
+        <td>{{conj.direccion}}</td>
+        <td>{{conj.telefono}}</td>
+        <td>{{conj.correo}}</td>
+        <td>
+            <a routerLink='/modulos/editar-conjunto/{{conj.id}}'>
+                <span>Editar</span>
+            </a>
+        </td>
+      </tr>
+    </tbody>
+</table>

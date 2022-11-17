@@ -6,6 +6,7 @@ import { CrearConjuntoComponent } from './crear-conjunto/crear-conjunto.componen
 import { EliminarConjuntoComponent } from './eliminar-conjunto/eliminar-conjunto.component';
 import { ActualizarConjuntoComponent } from './actualizar-conjunto/actualizar-conjunto.component';
 import { BuscarConjuntoComponent } from './buscar-conjunto/buscar-conjunto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { BuscarConjuntoComponent } from './buscar-conjunto/buscar-conjunto.compo
   ],
   imports: [
     CommonModule,
-    ConjuntoRoutingModule
+    ConjuntoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ConjuntoModule { }

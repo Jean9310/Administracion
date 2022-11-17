@@ -1,1 +1,72 @@
-<p>actualizar-conjunto works!</p>
+<body>
+    <div class="container">
+      <!-- Page Content goes here -->
+      
+      <form [formGroup]="formConjunto" (ngSubmit)="guardarConjunto()" class="col s12">
+      <fieldset >
+        <legend>Datos del conjunto </legend><br>
+        <br><div class="row 5">
+            <div class="col-md-6">
+                <label id="nombreconjunto" class="active"> <i class="small material-icons">home</i>ID</label>
+                <input id="nombreconjunto"  formControlName="id" type="text" class="form-control" placeholder=" " aria-label="Nombre">
+             </div>
+            <div class="col-md-5">
+                <label class="active"><i class="small material-icons">chrome_reader_mode</i> Nit</label>
+                <input formControlName="nit"  type="text" class="form-control" placeholder=" " aria-label="Nombre">
+            </div>
+            <div class="col-md-6">
+                <label id="nombreconjunto" class="active"> <i class="small material-icons">home</i>Nombre de conjunto</label>
+                <input id="nombreconjunto"  formControlName="nombre_conjunto" type="text" class="form-control" placeholder=" " aria-label="Nombre">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+                <label id="direccionconjunto" class="active"> <i class="small material-icons">confirmation_number</i>direccion</label>
+                <input id="direccionconjunto" formControlName="direccion" type="text" class="form-control" placeholder=" " aria-label="First-name">
+            </div>
+            <div class="col">
+                <label id="telefonoconjunto" class="active"> <i class="small material-icons">phone</i>telefono</label>
+                <input id="telefonoconjunto" formControlName="telefono" type="text" class="form-control" placeholder="" aria-label="Last-name">
+            </div>
+            <div class="col">
+                <label id="estratoconjunto" class="active"><i class="small material-icons">panorama</i> estrato</label>
+                <input type="text" id="estratoconjunto" formControlName="estrato" class="form-control" placeholder="" aria-label="Last-name">
+            </div>
+            </div>         
+        </fieldset>
+  
+        <div class="row 5">
+            <div class="col-md-7">
+                <label for="inputEmail4" id="emailconjunto" class="form-label" class="active"><i class="small material-icons">public</i> correo</label>
+                <input type="email" class="form-control" formControlName="correo" id="emailconjunto">
+            </div>
+            
+            <div class="col-md-5">
+                <label id="cuentaconjunto"> <i class="small material-icons" class="active">credit_card</i> Cuenta Bancaria</label>
+                <input id="cuentaconjunto" type="text" class="form-control" formControlName="cuenta_bancaria" placeholder="" aria-label="txtCuentaBancaria">
+            </div>
+            
+            <div class="col-md 5">
+                <label id="bancoconjunto"><i class="small material-icons" class="active">account_balance</i> Banco</label>
+                <input type="text" id="bancoconjunto" formControlName="banco" class="form-control" placeholder="" aria-label="txtBanco">
+            </div>
+            <div class="col">
+                <label id="interesconjunto"><i class="small material-icons" class="active">chrome_reader_mode</i> Interes de Mora</label>
+                <input type="text" id="interesconjunto" class="form-control" formControlName="interes_mora" placeholder="" aria-label="txtInteresMora">
+            </div>
+            <div class="col">
+                <label id="numfacconjunto"><i class="small material-icons" class="active">content_copy</i> Numero de factura</label>
+                <input type="text" formControlName="inicio_factura" id="numfacconjunto" class="form-control" placeholder="" aria-label="txtConsecutivoFactura">
+            </div>
+            <div class="col">
+                <label id="presupuestoconjunto"> <i class="small material-icons" class="active">euro_symbol</i> Presupuesto</label>
+                <input type="text" id="presupuestoconjunto"  formControlName="presupuesto" class="form-control" placeholder="" aria-label="txtPresupuesto">
+            </div>
+        </div>
+    </form>
+      <div class="col-12"><br>
+        <button [disabled]="!formConjunto.valid" type="submit" class="btn btn-primary" id="Btn">Crear Nuevo conjunto</button>
+      </div>
+    </div>
+    <br>
+  </body>

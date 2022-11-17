@@ -15,11 +15,11 @@ const routes: Routes = [
     component: BuscarConjuntoComponent
   },
   {
-    path:'eliminar',
+    path:'eliminar-conjunto',
     component: EliminarConjuntoComponent
   },
   {
-    path: 'actualizar',
+    path: 'actualizar-conjunto/:id',
     component: ActualizarConjuntoComponent
   }
 ];

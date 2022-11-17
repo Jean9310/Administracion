@@ -1,67 +1,69 @@
 <body>
   <div class="container">
     <!-- Page Content goes here -->
-
-    <fieldset>
+    
+    <form [formGroup]="formConjunto" (ngSubmit)="guardarConjunto()" class="col s12">
+    <fieldset >
       <legend>Datos del conjunto </legend><br>
       <br><div class="row 5">
         <div class="col-md-5">
           <label><i class="small material-icons">chrome_reader_mode</i> Nit</label>
-          <input type="text" class="form-control" placeholder=" " aria-label="Nombre">
+          <input formControlName="nit"  type="text" class="form-control" placeholder=" " aria-label="Nombre">
         </div>
         <div class="col-md-6">
-          <label> <i class="small material-icons">home</i>Nombre de conjunto</label>
-          <input type="text" class="form-control" placeholder=" " aria-label="Nombre">
+          <label id="nombreconjunto"> <i class="small material-icons">home</i>Nombre de conjunto</label>
+          <input id="nombreconjunto"  formControlName="nombre_conjunto" type="text" class="form-control" placeholder=" " aria-label="Nombre">
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <label> <i class="small material-icons">confirmation_number</i>direccion</label>
-          <input type="text" class="form-control" placeholder=" " aria-label="First-name">
+          <label id="direccionconjunto"> <i class="small material-icons">confirmation_number</i>direccion</label>
+          <input id="direccionconjunto" formControlName="direccion" type="text" class="form-control" placeholder=" " aria-label="First-name">
         </div>
         <div class="col">
-          <label> <i class="small material-icons">phone</i>telefono</label>
-          <input type="text" class="form-control" placeholder="" aria-label="Last-name">
+          <label id="telefonoconjunto"> <i class="small material-icons">phone</i>telefono</label>
+          <input id="telefonoconjunto" formControlName="telefono" type="text" class="form-control" placeholder="" aria-label="Last-name">
         </div>
         <div class="col">
-          <label><i class="small material-icons">panorama</i> estrato</label>
-          <input type="text" class="form-control" placeholder="" aria-label="Last-name">
+          <label id="estratoconjunto"><i class="small material-icons">panorama</i> estrato</label>
+          <input type="text" id="estratoconjunto" formControlName="estrato" class="form-control" placeholder="" aria-label="Last-name">
         </div>
       </div>
+
+      
     </fieldset>
 
     <div class="row 5">
       <div class="col-md-7">
-        <label for="inputEmail4" class="form-label"><i class="small material-icons">public</i> correo</label>
-        <input type="email" class="form-control" id="email">
+        <label for="inputEmail4" id="emailconjunto" class="form-label"><i class="small material-icons">public</i> correo</label>
+        <input type="email" class="form-control" formControlName="correo" id="emailconjunto">
       </div>
       
         <div class="col-md-5">
-          <label> <i class="small material-icons">credit_card</i> Cuenta Bancaria</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtCuentaBancaria">
+          <label id="cuentaconjunto"> <i class="small material-icons">credit_card</i> Cuenta Bancaria</label>
+        <input id="cuentaconjunto" type="text" class="form-control" formControlName="cuenta_bancaria" placeholder="" aria-label="txtCuentaBancaria">
       </div>
       
       <div class="col-md 5">
-        <label><i class="small material-icons">account_balance</i> Banco</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtBanco">
+        <label id="bancoconjunto"><i class="small material-icons">account_balance</i> Banco</label>
+        <input type="text" id="bancoconjunto" formControlName="banco" class="form-control" placeholder="" aria-label="txtBanco">
       </div>
       <div class="col">
-        <label><i class="small material-icons">chrome_reader_mode</i> Interes de Mora</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtInteresMora">
+        <label id="interesconjunto"><i class="small material-icons">chrome_reader_mode</i> Interes de Mora</label>
+        <input type="text" id="interesconjunto" class="form-control" formControlName="interes_mora" placeholder="" aria-label="txtInteresMora">
       </div>
       <div class="col">
-        <label><i class="small material-icons">content_copy</i> Numero de factura</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtConsecutivoFactura">
+        <label id="numfacconjunto"><i class="small material-icons">content_copy</i> Numero de factura</label>
+        <input type="text" formControlName="inicio_factura" id="numfacconjunto" class="form-control" placeholder="" aria-label="txtConsecutivoFactura">
       </div>
       <div class="col">
-        <label> <i class="small material-icons">euro_symbol</i> Presupuesto</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtPresupuesto">
+        <label id="presupuestoconjunto"> <i class="small material-icons">euro_symbol</i> Presupuesto</label>
+        <input type="text" id="presupuestoconjunto"  formControlName="presupuesto" class="form-control" placeholder="" aria-label="txtPresupuesto">
       </div>
-
-
     </div>
+  </form>
     <div class="col-12"><br>
-      <button type="submit" class="btn btn-primary" id="Btn">Crear Nuevo conjunto</button>
+      <button [disabled]="!formConjunto.valid" type="submit" class="btn btn-primary" id="Btn">Crear Nuevo conjunto</button>
     </div>
   </div>
   <br>
