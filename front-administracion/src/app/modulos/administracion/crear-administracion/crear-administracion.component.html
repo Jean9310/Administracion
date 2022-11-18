@@ -1,53 +1,60 @@
-
 <body>
-    <div class="container">
+
+  <div class="container" >
+    <form [formGroup]="formAdministracion" (ngSubmit)="guardarAdministrador"> 
       <!-- Page Content goes here -->
       <div class="row 5">
         <div class="col">
           <label><i class="small material-icons">people</i> Nombre</label>
-          <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+          <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="nombre">
         </div>
         <div class="col">
           <label><i class="small material-icons">mode_comment</i> opcional</label>
-          <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+          <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="segundo_nombre">
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label><i class="small material-icons">people</i> apellido</label>
-          <input type="text" class="form-control" placeholder="" aria-label="First-name">
+          <input type="text" class="form-control" placeholder="" aria-label="First-name" formControlName="primer_apellido">
         </div>
         <div class="col">
           <label><i class="small material-icons">mode_comment</i> opcional</label>
-          <input type="text" class="form-control" placeholder="" aria-label="Last-name">
+          <input type="text" class="form-control" placeholder="" aria-label="Last-name" formControlName="segundo_apellido">
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" [formGroup]="formAdministracion">
           <label><i class="small material-icons">contact_mail</i> correo</label>
-          <input type="email" class="form-control" id="email">
+          <input type="email" class="form-control" id="email" formControlName="correo">
         </div>
-  
+
         <div class="col-md-4">
           <label><i class="small material-icons">contacts</i> documento</label>
-          <input type="text" class="form-control" placeholder="" aria-label="txtDocumento">
+          <input type="text" class="form-control" placeholder="" aria-label="txtDocumento" formControlName="documento">
         </div>
         <div class="col-md-4">
-          <label><i class="small material-icons">contact_phone</i> telefono</label>
-          <input type="text" class="form-control" placeholder="" aria-label="txtTelefono">
+          <label><i class="small material-icons">contact_phone</i> Celular</label>
+          <input type="text" class="form-control" placeholder="" aria-label="txtTelefono" formControlName="celular">
         </div>
         <div class="col-md-4">
           <label> <i class="small material-icons">folder_shared</i> profesion</label>
-          <input type="text" class="form-control" placeholder="" aria-label="txtEscritura">
+          <input type="text" class="form-control" placeholder="" aria-label="txtEscritura" formControlName="profesion">
+        </div>
+        <div class="col-md-4">
+          <label> <i class="small material-icons"></i> contraseña</label>
+          <input type="password" class="form-control" placeholder="" aria-label="txtEscritura" formControlName="contrasena">
         </div>
       </div>
-       <br>
-      <div class="col-12" >
-        <button type="submit" class="btn btn-warning" Style="margin-left: 45%;">Crear Nuevo administrador</button>
+      <br>
+      <div class="col-12">
+        <button type="submit" class="btn btn-warning" Style="margin-left: 45%;"
+          [disabled]="formAdministracion.valid">Crear Nuevo administrador</button>
       </div>
-    </div>
-    <br>
-  
-  
-  </body>
+    </form>
+  </div>
+  <br>
+
+
+</body>
 <!-- se nesecita crear primero el  admiistrador con el boton y que lo guarde en la base de datos y lo mismo para el propietario   -->

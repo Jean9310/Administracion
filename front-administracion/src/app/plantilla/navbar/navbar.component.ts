@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(`En SEsion ${this.sesion}`);
     this.subs = this.loginservice.getUsuariosEnSesion()
     .subscribe( (datos : LoginModelo ) => {
       this.sesion = datos.enSesion != null ? datos.enSesion: false;

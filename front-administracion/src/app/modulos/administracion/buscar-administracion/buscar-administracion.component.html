@@ -1,52 +1,43 @@
 
-    <body>
-        <div class="container">
-          <!-- Page Content goes here -->
-          <div class="row 5">
-            <div class="col">
-              <label><i class="small material-icons">people</i> Nombre</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Nombre">
-            </div>
-            <div class="col">
-              <label><i class="small material-icons">mode_comment</i> opcional</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Nombre">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label><i class="small material-icons">people</i> apellido</label>
-              <input type="text" class="form-control" placeholder="" aria-label="First-name">
-            </div>
-            <div class="col">
-              <label><i class="small material-icons">mode_comment</i> opcional</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Last-name">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <label><i class="small material-icons">contact_mail</i> correo</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-      
-            <div class="col-md-4">
-              <label><i class="small material-icons">contacts</i> documento</label>
-              <input type="text" class="form-control" placeholder="" aria-label="txtDocumento">
-            </div>
-            <div class="col-md-4">
-              <label><i class="small material-icons">contact_phone</i> telefono</label>
-              <input type="text" class="form-control" placeholder="" aria-label="txtTelefono">
-            </div>
-            <div class="col-md-4">
-              <label> <i class="small material-icons">folder_shared</i> profesion</label>
-              <input type="text" class="form-control" placeholder="" aria-label="txtEscritura">
-            </div>
-          </div>
-           <br>
-          <div class="col-12" >
-            <button type="submit" class="btn btn-info" Style="margin-left: 45%;"> <i class="small material-icons">file_upload</i>Guardar Cambios</button>
-          </div>
-        </div>
-        <br>
-      
-      
-      </body>
+<div>
+    <a class="waves-effect waves-light btn" routerLink="/administracion/crear-administracion" style="margin-left: 45%;"><i class="material-icons left" >add_box</i>Registrar Administrador</a>
+  </div>
+  <br>
+  
+  
+  <table>
+    <thead>
+      <tr>
+        
+          <th>Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Documento</th>
+          <th>Correo</th>
+          <th>Celular</th>
+          <th>Profesion</th>
+          <th>Opcion</th>
+  
+      </tr>
+    </thead>
+  
+    <tbody *ngFor="let admin of listadoAdministracion">
+      <tr>
+        
+        <td>{{admin.primer_nombre}}</td>
+        <td>{{admin.segundo_nombre}} </td>
+        <td>{{admin.primer_apellido}} </td>
+        <td>{{admin.segundo_apellido}} </td>
+        <td>{{admin.documento}} </td>
+        <td>{{admin.correo}} </td>
+        <td>{{admin.celular}} </td>
+        <td>{{admin.profesion}} </td>
+       <td>
+        <a routerLink="/administracion/actualizar-administracion/{{admin.id}}">
+        <span> <i class="mediun material-icons">party_mode</i></span></a>
+       </td>
+      </tr>
+     
+    </tbody>
+  </table>
