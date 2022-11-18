@@ -1,0 +1,28 @@
+
+div{
+    color: black;
+    text-justify: auto;
+    
+    text-transform: capitalize;
+}
+label{
+    color: black;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+    justify-items: center;
+    font-style: oblique;
+
+}
+input{
+    border-color: black;
+    color: blue;
+}
+legend{
+    text-align: center;
+    text-decoration: double underline blue;
+    color: blue;
+    font-size: 2rem;
+    font-style: italic;
+    text-indent: 2%;
+}

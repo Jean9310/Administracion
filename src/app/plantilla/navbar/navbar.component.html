@@ -1,0 +1,13 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/inicio" class="brand-logo"><i class="large material-icons">location_city</i> Propiedad Horizontal</a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="sesion === false"><a routerLink="/login/crear-clave" ><i class="material-icons left">person</i>Usuario</a></li>
+      <li *ngIf="sesion === true"><a routerLink="/administracion/buscar-administracion">Administrador</a></li>
+      <li *ngIf="sesion ===true"><a routerLink="/zona-social/buscar-zona-social">alquiler</a></li>
+      <li *ngIf="sesion === true" ><a routerLink="/factura/buscar-factura">facturas</a></li>
+      <li *ngIf="sesion === true"><a routerLink="/propietario/buscar">propietarios</a></li>
+      <li *ngIf="sesion === true"><a (click)="cerrarSesion()"><i class="material-icons right">settings_power</i>Cerrar Sesion</a></li>
+      </ul>
+  </div>
+</nav>

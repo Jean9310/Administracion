@@ -1,0 +1,43 @@
+
+<div>
+    <a class="waves-effect waves-light btn" routerLink="/administracion/crear-administracion" style="margin-left: 45%;"><i class="material-icons left" >add_box</i>Registrar Administrador</a>
+  </div>
+  <br>
+  
+  
+  <table>
+    <thead>
+      <tr>
+        
+          <th>Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Documento</th>
+          <th>Correo</th>
+          <th>Celular</th>
+          <th>Profesion</th>
+          <th>Opcion</th>
+  
+      </tr>
+    </thead>
+  
+    <tbody *ngFor="let admin of listadoAdministracion">
+      <tr>
+        
+        <td>{{admin.primer_nombre}}</td>
+        <td>{{admin.segundo_nombre}} </td>
+        <td>{{admin.primer_apellido}} </td>
+        <td>{{admin.segundo_apellido}} </td>
+        <td>{{admin.documento}} </td>
+        <td>{{admin.correo}} </td>
+        <td>{{admin.celular}} </td>
+        <td>{{admin.profesion}} </td>
+       <td>
+        <a routerLink="/administracion/actualizar-administracion/{{admin.id}}">
+        <span> <i class="mediun material-icons">party_mode</i></span></a>
+       </td>
+      </tr>
+     
+    </tbody>
+  </table>

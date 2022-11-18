@@ -1,0 +1,28 @@
+footer {
+   background-color: darkblue;
+}
+
+a {
+   color: white;
+   text-transform: uppercase;
+   align-items: center;
+   text-align: right;
+   justify-items: end;
+}
+
+.logos {
+   width: 40px;
+
+   margin-right: 10%;
+   margin-left: 65%;
+
+}
+
+h5 {
+   text-decoration: double solid;
+}
+
+img {
+   width: 200px;
+   height: min-content;
+}

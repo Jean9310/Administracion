@@ -1,0 +1,25 @@
+th{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: blue;
+    text-decoration-line: underline;
+}
+#calendario{
+    align-items: rigth;
+}
+fieldset{
+    size: 2em;
+    color: black;
+    
+    border: 3px;
+}
+td{
+    text-align: left;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-color: blue;
+}
+table,tr{
+    border-style: dashed dotted ;
+    color: darkblue;
+}
