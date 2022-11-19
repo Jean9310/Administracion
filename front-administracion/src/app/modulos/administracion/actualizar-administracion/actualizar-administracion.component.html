@@ -1,14 +1,10 @@
 <body>
   <div class="container">
     <!-- Page Content goes here -->
-    <form [formGroup]="formAdministracion" (ngsubmit)="guardarAdministrador()">
+    <form [formGroup]="formaAdministracion" (ngsubmit)="guardarAdministrador()">
       <div class="row">
-        
+        <input formControlName="id" type="text" >
           <div class="row">
-            <div class="input-field col s6">
-              <input placeholder="Placeholder" type="text" class="validate" formControlName="id">
-              <label for="id" class="active">id</label>
-            </div>
             <div class="input-field col s6">
               <input placeholder="Placeholder" type="text" class="validate" formControlName="primer_nombre">
               <label for="primer_nombre" class="active">First Name</label>
@@ -57,7 +53,7 @@
       </div>
      
       <div class="col-12">
-        <button [disabled]="!formAdministracion.valid" type="submit" class="btn btn-info" Style="margin-left: 45%;"> <i
+        <button [disabled]="!formaAdministracion.valid" type="submit" class="btn btn-info" Style="margin-left: 45%;"> <i
             class="small material-icons">file_upload</i>Guardar Cambios</button>
       </div>
 

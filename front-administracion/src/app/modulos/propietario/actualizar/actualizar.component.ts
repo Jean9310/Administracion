@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PropietarioModelo } from 'src/app/modelos/propietarios.modelo';
@@ -54,10 +54,10 @@ export class ActualizarComponent implements OnInit {
       .subscribe( {
         next: (datos) => {
           alert("Sus Datos fueron actualizados")
-          this.route.navigate(['/administracion/buscar-administracion']);
+          this.route.navigate(['/propietario/buscar']);
         },
         error :(error)=> {
-          console.log(`Error al Guaradar el administrador ${error}`);
+          console.log(`Error al Guaradar el propietario ${error}`);
         }
       
       });
@@ -80,7 +80,7 @@ export class ActualizarComponent implements OnInit {
         
       },
       error:(error)=>{
-        console.log('Error al buscar al Administrador' + error);
+        console.log('Error al buscar un propietario' + error);
       }
     })
   }
