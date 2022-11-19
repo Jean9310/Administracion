@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PropietarioModelo } from 'src/app/modelos/propietarios.modelo';
+
+import { PropietarioService } from 'src/app/servicios/propietario.service';
 
 @Component({
   selector: 'app-buscar',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarComponent implements OnInit {
 
-  constructor() { }
+  listadoPropietario: PropietarioModelo[]=[];
+  constructor(
+    private propietarioService: PropietarioService
+  ) { 
+    this.getListaPropietarios();
+  }
 
   ngOnInit(): void {
   }
+
+
+
+  getListaPropietarios(){
+    this.propietarioService.getPropietario()
+      .subscribe((propietario: PropietarioModelo[])=>{
+        this.listadoPropietario= propietario;
+
+      });
+
+  }
+
+
 
 }

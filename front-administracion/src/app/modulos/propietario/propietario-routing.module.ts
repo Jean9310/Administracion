@@ -11,7 +11,7 @@ const routes: Routes = [
     component: CrearComponent
   },
   {
-    path: "actualizar",
+    path: "actualizar/:id",
     component: ActualizarComponent
   },
   {

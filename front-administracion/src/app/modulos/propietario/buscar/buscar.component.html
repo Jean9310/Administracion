@@ -1,1 +1,42 @@
-<p>buscar works!</p>
+<div>
+    <a class="waves-effect waves-light btn" routerLink="/propietario/crear" style="margin-left: 45%;"><i class="material-icons left" >add_box</i>Registrar propietario</a>
+  </div>
+  <br>
+  
+  
+  <table>
+    <thead>
+      <tr>
+        
+          <th>Nombre</th>
+          <th>Segundo Nombre</th>
+          <th>Apellido</th>
+          <th>Segundo Apellido</th>
+          <th>Documento</th>
+          <th>Correo</th>
+          <th>Celular</th>
+          <th>Profesion</th>
+          <th>Opcion</th>
+  
+      </tr>
+    </thead>
+  
+    <tbody *ngFor="let pro of listadoPropietario">
+      <tr>
+        
+        <td>{{pro.primer_nombre}}</td>
+        <td>{{pro.segundo_nombre}} </td>
+        <td>{{pro.primer_apellido}} </td>
+        <td>{{pro.segundo_apellido}} </td>
+        <td>{{pro.documento}} </td>
+        <td>{{pro.correo}} </td>
+        <td>{{pro.contrasena}} </td>
+        <td>{{pro.escritura}} </td>
+       <td>
+        <a routerLink="/propietario/actualizar/{{pro.id}}">
+        <span> <i class="mediun material-icons">party_mode</i></span></a>
+       </td>
+      </tr>
+     
+    </tbody>
+  </table>

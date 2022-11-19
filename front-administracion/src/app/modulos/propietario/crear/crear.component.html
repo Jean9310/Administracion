@@ -1,49 +1,54 @@
 <body>
-  <div class="container">
-    <!-- Page Content goes here -->
-    <div class="row 5">
-      <div class="col">
-        <label><i class="small material-icons">people</i> Nombre</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Nombre">
-      </div>
-      <div class="col">
-        <label> <i class="small material-icons">mode_comment</i> opcional</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Nombre">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label><i class="small material-icons">people</i> apellido</label>
-        <input type="text" class="form-control" placeholder="" aria-label="First-name">
-      </div>
-      <div class="col">
-        <label> <i class="small material-icons">mode_comment</i> opcional</label>
-        <input type="text" class="form-control" placeholder="" aria-label="Last-name">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <label><i class="small material-icons">contact_mail</i> correo</label>
-        <input type="email" class="form-control" id="email">
-      </div>
 
-      <div class="col-md-4">
-        <label><i class="small material-icons">contacts</i> documento</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtDocumento">
+  <div class="container" >
+    <form [formGroup]="formularioPropietario" (ngSubmit)="guardarPropietario()"> 
+      <!-- Page Content goes here -->
+      <div class="row 5">
+        <div class="col">
+          <label><i class="small material-icons">people</i>Primer Nombre</label>
+          <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="primer_nombre">
+        </div>
+        <div class="col">
+          <label><i class="small material-icons">mode_comment</i>Segundo Nombre</label>
+          <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="segundo_nombre">
+        </div>
       </div>
-      <div class="col-md-4">
-        <label><i class="small material-icons">contact_phone</i> telefono</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtTelefono">
+      <div class="row">
+        <div class="col">
+          <label><i class="small material-icons">people</i>Primer apellido</label>
+          <input type="text" class="form-control" placeholder="" aria-label="First-name" formControlName="primer_apellido">
+        </div>
+        <div class="col">
+          <label><i class="small material-icons">mode_comment</i>Segundo Apellido</label>
+          <input type="text" class="form-control" placeholder="" aria-label="Last-name" formControlName="segundo_apellido">
+        </div>
       </div>
-      <div class="col-md-4">
-        <label> <i class="small material-icons">content_paste</i> escritura</label>
-        <input type="text" class="form-control" placeholder="" aria-label="txtEscritura">
+      <div class="row">
+        <div class="col-md-4">
+          <label><i class="small material-icons">contact_mail</i> correo</label>
+          <input type="email" class="form-control" id="email" formControlName="correo">
+        </div>
+
+        <div class="col-md-4">
+          <label><i class="small material-icons">contacts</i> documento</label>
+          <input type="text" class="form-control" placeholder="" aria-label="txtDocumento" formControlName="documento">
+        </div>
+        <div class="col-md-4">
+          <label><i class="small material-icons">contact_phone</i> escritura</label>
+          <input type="text" class="form-control" placeholder="" aria-label="txtEscritura" formControlName="escritura">
+        </div>
+        
+        <div class="col-md-4">
+          <label> <i class="small material-icons"></i> contraseña</label>
+          <input type="password" class="form-control" placeholder="" aria-label="txtContraseña" formControlName="contrasena">
+        </div>
       </div>
-    </div>
-     <br>
-    <div class="col-12" >
-      <button type="submit" class="btn btn-warning" Style="margin-left: 45%;">Crear Nuevo propietario</button>
-    </div>
+      <br>
+      <div class="col-12">
+        <button type="submit" class="btn btn-warning" Style="margin-left: 45%;"
+          [disabled]="!formularioPropietario.valid">Crear Nuevo Propietario</button>
+      </div>
+    </form>
   </div>
   <br>
 

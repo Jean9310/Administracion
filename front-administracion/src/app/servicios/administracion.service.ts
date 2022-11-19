@@ -30,7 +30,7 @@ export class AdministracionService {
 
   }
   actualizarAdministrador(administracion : AdministracionModelo ) : Observable<AdministracionModelo>{
-    return this.http.put<AdministracionModelo>(`${this.url}/administradors/${administracion.id}`, administracion, {
+    return this.http.patch<AdministracionModelo>(`${this.url}/administradors/${administracion.id}`, administracion, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })

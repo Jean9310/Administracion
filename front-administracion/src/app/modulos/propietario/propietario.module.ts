@@ -6,6 +6,7 @@ import { CrearComponent } from './crear/crear.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { EliminarComponent } from './eliminar/eliminar.component';
 import { ActualizarComponent } from './actualizar/actualizar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { ActualizarComponent } from './actualizar/actualizar.component';
   ],
   imports: [
     CommonModule,
-    PropietarioRoutingModule
+    PropietarioRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PropietarioModule { }
