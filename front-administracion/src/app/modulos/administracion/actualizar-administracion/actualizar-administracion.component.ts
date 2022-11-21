@@ -40,6 +40,7 @@ export class ActualizarAdministracionComponent implements OnInit {
   }
 
   guardarAdministrador(){
+
     let administracion : AdministracionModelo = {
       id: this.formAdministracion.controls['id'].value,
       primer_nombre: this.formAdministracion.controls['primer_nombre'].value,
@@ -51,11 +52,12 @@ export class ActualizarAdministracionComponent implements OnInit {
       celular: this.formAdministracion.controls['celular'].value,
       contrasena : this.formAdministracion.controls['contrasena'].value,
       profesion : this.formAdministracion.controls['profesion'].value,
+
     }
     this.administracionService.actualizarAdministrador(administracion)
       .subscribe( {
         next: (datos) => {
-          alert('actualizando sus datos por favor espere.....' )
+          alert('Actualizando sus datos.... ')
           this.route.navigate(['/administracion/buscar-administracion']);
         },
         error :(error)=> {
@@ -68,18 +70,20 @@ export class ActualizarAdministracionComponent implements OnInit {
   getAdmininistracion(){
     this.administracionService.getAdministradorId(this.id)
     .subscribe({
-      next:( administracion) => {
-        
+      next:(administracion) => {
+ 
+
         this.formAdministracion.controls['id'].setValue(administracion.id);
         this.formAdministracion.controls['primer_nombre'].setValue(administracion.primer_nombre);
         this.formAdministracion.controls['segundo_nombre'].setValue(administracion.segundo_nombre);
         this.formAdministracion.controls['primer_apellido'].setValue(administracion.primer_apellido);
         this.formAdministracion.controls['segundo_apellido'].setValue(administracion.segundo_apellido);
-        this.formAdministracion.controls['documento'].setValue(administracion.documento);
         this.formAdministracion.controls['correo'].setValue(administracion.correo);
+        this.formAdministracion.controls['documento'].setValue(administracion.documento);
         this.formAdministracion.controls['celular'].setValue(administracion.celular);
         this.formAdministracion.controls['contrasena'].setValue(administracion.contrasena);
         this.formAdministracion.controls['profesion'].setValue(administracion.profesion);
+
         
         },
       error:(error)=>{
