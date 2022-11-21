@@ -27,7 +27,7 @@ export class CrearClaveComponent implements OnInit {
     clave = cryptoJS.MD5(clave).toString();
     this.loginservice.validarUsuario(usuario, clave)
     .subscribe( (datos) => {
-      alert(`Logeado con exito ....` + usuario)
+      alert(`Logeado con exito .... ` + usuario)
        this.loginservice.sesionesGuardadas(datos);
       },
       (error) => {

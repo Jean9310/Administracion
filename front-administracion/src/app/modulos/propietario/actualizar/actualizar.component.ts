@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PropietarioModelo } from 'src/app/modelos/propietarios.modelo';
 import { PropietarioService } from 'src/app/servicios/propietario.service';
-
 @Component({
   selector: 'app-actualizar',
   templateUrl: './actualizar.component.html',
@@ -11,7 +10,6 @@ import { PropietarioService } from 'src/app/servicios/propietario.service';
 })
 export class ActualizarComponent implements OnInit {
   id : string = '';
-
   formPropietario : FormGroup = this.formBuilder.group({
     'id':['', [Validators.required]],
     'primer_nombre':['', [Validators.required]],
@@ -22,22 +20,17 @@ export class ActualizarComponent implements OnInit {
     'correo':['', [Validators.required]],
     'contrasena':['', [Validators.required]],
     'escritura':['',[ Validators.required]],
-
   });
-
-
   constructor(
     private formBuilder : FormBuilder,
     private propietarioService: PropietarioService,
     private route : Router,
     private router : ActivatedRoute
   ) { }
-
   ngOnInit(): void {
     this.id  = this.router.snapshot.params['id'];
     this.getPropietario();
   }
-
   guardarPropietario(){
     let prop : PropietarioModelo = {
       id: this.formPropietario.controls['id'].value,
@@ -55,14 +48,15 @@ export class ActualizarComponent implements OnInit {
         next: (datos) => {
           alert("Sus Datos fueron actualizados")
           this.route.navigate(['/administracion/buscar-administracion']);
+          this.route.navigate(['/propietario/buscar']);
         },
         error :(error)=> {
           console.log(`Error al Guaradar el administrador ${error}`);
+          console.log(`Error al Guaradar el propietario ${error}`);
         }
-      
+
       });
   }
-
   getPropietario(){
     this.propietarioService.getPropietarioId(this.id)
     .subscribe({
@@ -77,10 +71,11 @@ export class ActualizarComponent implements OnInit {
         this.formPropietario.controls['contrasena'].setValue(propietario.contrasena);
         this.formPropietario.controls['escritura'].setValue(propietario.escritura);
         
-        
+
       },
       error:(error)=>{
         console.log('Error al buscar al Administrador' + error);
+        console.log('Error al buscar un propietario' + error);
       }
     })
   }

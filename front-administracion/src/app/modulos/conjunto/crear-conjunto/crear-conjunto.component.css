@@ -26,3 +26,6 @@ legend{
     font-style: italic;
     text-indent: 2%;
 }
+.select {
+    display: flex;
+}

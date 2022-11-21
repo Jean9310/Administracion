@@ -1,56 +1,65 @@
-<body>
-    <div class="container">
-      <!-- Page Content goes here -->
-      <form [formGroup]="formPropietario" (ngsubmit)="guardarPropietario()">
-        <div class="row 5">
-          <div class="col">
+
+
+  <body>
+ 
+     <div class="container" >
+       <form [formGroup]="formPropietario" (ngSubmit)="guardarPropietario()"> 
+         <!-- Page Content goes here -->
+         <div class="row 5">
+           <input formControlName="id" type="text" hidden>
+           <div class="col">
+ 
+             <div class="col">
+               <label><i class="small material-icons">people</i> Nombre</label>
+               <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="primer_nombre">
+             </div>
+             <div class="col">
+               <label><i class="small material-icons">mode_comment</i> opcional</label>
+               <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="segundo_nombre">
+             </div>
+           </div>
+           <div class="row">
+             <div class="col">
+               <label><i class="small material-icons">people</i> apellido</label>
+               <input type="text" class="form-control" placeholder="" aria-label="First-name" formControlName="primer_apellido">
+             </div>
+             <div class="col">
+               <label><i class="small material-icons">mode_comment</i> opcional</label>
+               <input type="text" class="form-control" placeholder="" aria-label="Last-name"  formControlName="segundo_apellido">
+             </div>
+           </div>
+ 
+             <div class="col-md-4">
+               <label><i class="small material-icons">contacts</i> documento</label>
+               <input type="text" class="form-control" placeholder="" aria-label="txtDocumento"  formControlName="documento">
+             </div><div class="row">
+             <div class="col-md-4">
+               <label><i class="small material-icons">contact_mail</i> correo</label>
+               <input type="email" class="form-control" id="email" formControlName="correo">
+             </div>
+             <div class="col-md-4">
+               <label><i class="small material-icons">contact_phone</i> Contraseña</label>
+               <input type="text" class="form-control" placeholder="" aria-label="txtTelefono" formControlName="contrasena">
+             </div>
+             <div class="col-md-4">
+               <label> <i class="small material-icons">folder_shared</i> profesion</label>
+               <input type="text" class="form-control" placeholder="" aria-label="txtEscritura" formControlName="escritura">
+             </div>
+           </div>
+           <br>
            
-            <div class="col">
-              <label><i class="small material-icons">people</i> Nombre</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="primer_nombre">
-            </div>
-            <div class="col">
-              <label><i class="small material-icons">mode_comment</i> opcional</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Nombre" formControlName="segundo_nombre">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label><i class="small material-icons">people</i> apellido</label>
-              <input type="text" class="form-control" placeholder="" aria-label="First-name" formControlName="primer_apellido">
-            </div>
-            <div class="col">
-              <label><i class="small material-icons">mode_comment</i> opcional</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Last-name"  formControlName="segundo_apellido">
-            </div>
-          </div>
-           
-            <div class="col-md-4">
-              <label><i class="small material-icons">contacts</i> documento</label>
-              <input type="text" class="form-control" placeholder="" aria-label="txtDocumento"  formControlName="documento">
-            </div><div class="row">
-            <div class="col-md-4">
-              <label><i class="small material-icons">contact_mail</i> correo</label>
-              <input type="email" class="form-control" id="email" formControlName="correo">
-            </div>
-            <div class="col-md-4">
-              <label><i class="small material-icons">contact_phone</i> Contraseña</label>
-              <input type="text" class="form-control" placeholder="" aria-label="txtTelefono" formControlName="contrasena">
-            </div>
-            <div class="col-md-4">
-              <label> <i class="small material-icons">folder_shared</i> profesion</label>
-              <input type="text" class="form-control" placeholder="" aria-label="txtEscritura" formControlName="escritura">
-            </div>
-          </div>
-          <br>
-          <div class="col-12">
-            <button [disabled]="!formPropietario.valid" type="submit" class="btn btn-info" Style="margin-left: 45%;"> <i class="small material-icons">file_upload</i>Guardar Cambios</button>
-          </div>
-        </div>
-        <br>
+         <br>
+         <div class="col-12">
+           <button type="submit" class="btn btn-warning" Style="margin-left: 45%;"
+             [disabled]="!formPropietario.valid">Actualizando</button>
+         </div>
+         </div>
       </form>
-    </div>
-  
-  
-  
-  </body>
+       
+     </div>
+     <br>
+ 
+ 
+ 
+   </body>
+   

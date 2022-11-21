@@ -52,7 +52,7 @@ export class CrearAdministracionComponent implements OnInit {
     this.administracionService.crearAdministrador(administracion)
       .subscribe( {
         next: (datos) => {
-          alert('Administrador guardao con exito.... ')
+          alert('Administrador guardado con exito.... ')
           this.route.navigate(['/administracion/buscar-administracion']);
         },
         error :(error)=> {

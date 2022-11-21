@@ -1,5 +1,5 @@
 <div class="mt-5">
-    <a class="waves-effect waves-light btn" routerLink="/modelo/crear-conjunto">Registrar Conjunto</a>
+    <a class="waves-effect waves-light btn" routerLink="/conjunto/crear-conjunto">Registrar Conjunto</a>
 </div>
 
 <table>
@@ -19,8 +19,10 @@
         <td>{{conj.direccion}}</td>
         <td>{{conj.telefono}}</td>
         <td>{{conj.correo}}</td>
+        <td>{{conj.contadorId}} </td>
+        <td>{{conj.administradorId}} </td>
         <td>
-            <a routerLink='/modulos/editar-conjunto/{{conj.id}}'>
+            <a routerLink='/conjunto/editar-conjunto/{{conj.id}}'>
                 <span>Editar</span>
             </a>
         </td>

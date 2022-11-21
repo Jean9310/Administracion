@@ -37,6 +37,7 @@ export class ConjuntoService {
   getConjuntos(): Observable<ConjuntoModelo[]>{
     return this.http.get<ConjuntoModelo[]>(`${this.url}/conjuntos`);
   }
+  
   getConjuntoXId(id:string):Observable<ConjuntoModelo>{
     return this.http.get<ConjuntoModelo>(`${this.url}/conjuntos/${id}`,{
       headers: new HttpHeaders({

@@ -46,8 +46,8 @@ export class ActualizarAdministracionComponent implements OnInit {
       segundo_nombre : this.formAdministracion.controls['segundo_nombre'].value,
       primer_apellido : this.formAdministracion.controls['primer_apellido'].value,
       segundo_apellido : this.formAdministracion.controls['segundo_apellido'].value,
-      correo : this.formAdministracion.controls['correo'].value,
       documento : this.formAdministracion.controls['documento'].value,
+      correo : this.formAdministracion.controls['correo'].value,      
       celular: this.formAdministracion.controls['celular'].value,
       contrasena : this.formAdministracion.controls['contrasena'].value,
       profesion : this.formAdministracion.controls['profesion'].value,
@@ -55,7 +55,7 @@ export class ActualizarAdministracionComponent implements OnInit {
     this.administracionService.actualizarAdministrador(administracion)
       .subscribe( {
         next: (datos) => {
-          
+          alert('actualizando sus datos por favor espere.....' )
           this.route.navigate(['/administracion/buscar-administracion']);
         },
         error :(error)=> {
@@ -75,8 +75,8 @@ export class ActualizarAdministracionComponent implements OnInit {
         this.formAdministracion.controls['segundo_nombre'].setValue(administracion.segundo_nombre);
         this.formAdministracion.controls['primer_apellido'].setValue(administracion.primer_apellido);
         this.formAdministracion.controls['segundo_apellido'].setValue(administracion.segundo_apellido);
-        this.formAdministracion.controls['correo'].setValue(administracion.correo);
         this.formAdministracion.controls['documento'].setValue(administracion.documento);
+        this.formAdministracion.controls['correo'].setValue(administracion.correo);
         this.formAdministracion.controls['celular'].setValue(administracion.celular);
         this.formAdministracion.controls['contrasena'].setValue(administracion.contrasena);
         this.formAdministracion.controls['profesion'].setValue(administracion.profesion);

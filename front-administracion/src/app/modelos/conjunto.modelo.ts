@@ -8,7 +8,11 @@ export class ConjuntoModelo{
     correo?: string;
     cuenta_bancaria?: number;
     banco?: string;
-    interes_mora?: string;
+    interes_mora?: number;
     inicio_factura?: string;
     presupuesto?: number;
+
+    
+    contadorId?: string;
+    administradorId?: string;
 }
