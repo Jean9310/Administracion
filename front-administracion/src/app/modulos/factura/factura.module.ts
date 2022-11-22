@@ -5,6 +5,7 @@ import { FacturaRoutingModule } from './factura-routing.module';
 import { CrearFacturaComponent } from './crear-factura/crear-factura.component';
 import { ElimnarFacturaComponent } from './elimnar-factura/elimnar-factura.component';
 import { ActualizarFacturaComponent } from './actualizar-factura/actualizar-factura.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,9 @@ import { ActualizarFacturaComponent } from './actualizar-factura/actualizar-fact
   ],
   imports: [
     CommonModule,
-    FacturaRoutingModule
+    FacturaRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class FacturaModule { }
