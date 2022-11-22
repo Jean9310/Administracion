@@ -1,0 +1,18 @@
+
+th{
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+
+}
+td{
+    text-align: center;
+    color: blue;
+    border-color: black;
+    text-transform: capitalize;
+
+}
+.container{
+    border-color: blue;
+    border: 3px;
+}

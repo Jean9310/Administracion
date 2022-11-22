@@ -45,3 +45,6 @@
   p{
     text-align: justify;
   }
+  .select{
+    display: flex;
+  }

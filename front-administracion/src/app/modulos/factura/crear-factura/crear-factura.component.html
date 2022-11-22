@@ -1,15 +1,24 @@
 <body class="container">
 
 
-  <div id="app" class="col-11">
+  <div id="app" class="col-11"><br>
 
     <h2>Factura</h2>
 
     <div class="row my-3">
-      <div class="col-10">
+      <div class="col-5">
         <h1>Mil Pasos</h1>
         <p>Primera de mayo</p>
-        <p>Torres de mayo</p>
+        <p>Torre A Facturar
+          <select class="select" id="" >
+            <option value="">-</option>
+            <option value="">Torre 1</option>
+            <option value="">Torre 2</option>
+            <option value="">Torre 8</option>
+            <option value="">Torre 10</option>
+            <option value="">Torre 15</option>
+          </select>
+        </p>
         <p>Localidad San Cristobal</p>
       </div>
       <div class="col-2">
@@ -21,28 +30,30 @@
 
     <div class="row fact-info mt-3">
       <div class="col-3">
-        <h5>Facturar a</h5>
+        <h5>Factura de</h5>
         <p>
-          Arian Manuel Garcia Reynoso
+          Conjunto residencial Los cerezos
+          jeann9310@hotmail.com
         </p>
       </div>
       <div class="col-3">
         <h5>Enviar a</h5>
         <p>
-          Cotui, Sanchez Ramirez
-          Santa Fe, #19
-          arianmanuel75@gmail.com
+          <select class="select" id="">propietarios
+            <option value="">-</option>
+            <option value="">{{prop.nombres} </option> <!--falta colocar los propietarios -->
+          </select>
         </p>
       </div>
       <div class="col-3">
-        <h5>N° de factura</h5>
+        <h5>N° de Factura Emitida</h5>
         <h5>Fecha</h5>
         <h5>Fecha de vencimiento</h5>
       </div>
       <div class="col-3">
         <h5>103</h5>
-        <p>09/05/2019</p>
-        <p>09/05/2019</p>
+        <p><input type="date" id=""></p>
+        <p><input type="date" id=""></p>
       </div>
     </div>
 
@@ -59,15 +70,15 @@
         <tbody>
           <tr>
             <td>1</td>
-            <td>Clases de Cha-Cha-Cha</td>
-            <td>3,000.00</td>
-            <td>3,000.00</td>
+            <td>Clases de baile</td>
+            <td>8,000.00</td>
+            <td>16,000.00</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Clases de Salsa</td>
-            <td>4,000.00</td>
-            <td>12,000.00</td>
+            <td>Clases de natacion</td>
+            <td>10,000.00</td>
+            <td>20,000.00</td>
           </tr>
         </tbody>
         <tfoot>
@@ -75,7 +86,7 @@
             <th></th>
             <th></th>
             <th>Total Factura</th>
-            <th>$15,000.00</th>
+            <th>$36,000.00</th>
           </tr>
         </tfoot>
       </table>

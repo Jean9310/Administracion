@@ -1,8 +1,8 @@
-<div class="mt-5">
-    <a class="waves-effect waves-light btn" routerLink="/conjunto/crear-conjunto">Registrar Conjunto</a>
-</div>
+<div class="mt-5 container">
+    <a class="waves-effect waves-light btn" routerLink="/conjunto/crear-conjunto" style="margin-left: 45%;">Registrar Conjunto</a>
+</div><br>
 
-<table>
+<table class="container">
     <thead>
       <tr>
           <th>Nombre</th>
@@ -19,8 +19,8 @@
         <td>{{conj.direccion}}</td>
         <td>{{conj.telefono}}</td>
         <td>{{conj.correo}}</td>
-        <td>{{conj.contadorId}} </td>
-        <td>{{conj.administradorId}} </td>
+        <td hidden>{{conj.contadorId}} </td>
+        <td hidden>{{conj.administradorId}} </td>
         <td>
             <a routerLink='/conjunto/editar-conjunto/{{conj.id}}'>
                 <span>Editar</span>
@@ -28,4 +28,4 @@
         </td>
       </tr>
     </tbody>
-</table>
+</table><br>

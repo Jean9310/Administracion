@@ -1,10 +1,10 @@
-<div>
+<div class="container"><br>
     <a class="waves-effect waves-light btn" routerLink="/propietario/crear" style="margin-left: 45%;"><i class="material-icons left" >add_box</i>Registrar propietario</a>
   </div>
   <br>
   
   
-  <table>
+  <table class="container">
     <thead>
       <tr>
         
@@ -14,7 +14,7 @@
           <th>Segundo Apellido</th>
           <th>Documento</th>
           <th>Correo</th>
-          <th>Celular</th>
+          <!-- <th>Contraseña</th> -->
           <th>Profesion</th>
           <th>Opcion</th>
   
@@ -30,7 +30,7 @@
         <td>{{pro.segundo_apellido}} </td>
         <td>{{pro.documento}} </td>
         <td>{{pro.correo}} </td>
-        <td>{{pro.contrasena}} </td>
+        <!-- <td>{{pro.contrasena}} </td> -->
         <td>{{pro.escritura}} </td>
        <td>
         <a routerLink="/propietario/actualizar/{{pro.id}}">
@@ -39,4 +39,4 @@
       </tr>
      
     </tbody>
-  </table>
+  </table><br>

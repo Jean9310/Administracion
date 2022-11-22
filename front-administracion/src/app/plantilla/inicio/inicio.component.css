@@ -1,8 +1,14 @@
 .fondo {
     background-repeat: no-repeat;
     background-image: url(https://www.participacionbogota.gov.co/sites/default/files/2020-03/RecomendacionesPH_SlideWeb.jpg);
-    height: 800px;
-    width: 1430px;
+    height: 900px;
+    width: 1460px;
     position: relative;
     background-color: aquamarine;
+}
+
+div{
+    height: 900px;
+    width: 1460px;
+    background-repeat: no-repeat;
 }
